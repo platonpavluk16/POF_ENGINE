@@ -1,0 +1,37 @@
+{
+  "scene": {
+    "name": "Code",
+    "objects": [
+      {
+        "id": "polygon",
+        "name": "Polygon",
+        "components": {
+          "transform": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "polygon",
+              "sides": 6,
+              "radius": 0.5
+            },
+            "color": [
+              0.7,
+              0.7,
+              0.7,
+              1.0
+            ]
+          },
+          "script": {
+            "scripts": [
+              "D:/project/game_engine_python/scripts/example_movement.py"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

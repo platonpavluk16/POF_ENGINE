@@ -1,0 +1,110 @@
+{
+  "scene": {
+    "name": "Main",
+    "objects": [
+      {
+        "id": "rect",
+        "name": "Rectangle",
+        "components": {
+          "transform": {
+            "x": -0.8700000047683716,
+            "y": -0.44999998807907104,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "rectangle",
+              "width": 0.8,
+              "height": 0.5
+            },
+            "color": [
+              0.92,
+              0.22,
+              0.22,
+              1.0
+            ]
+          },
+          "collider": {
+            "width": 0.8,
+            "height": 0.5,
+            "is_solid": true,
+            "mass": 5.699999809265137
+          },
+          "script": {
+            "scripts": [
+              "D:/project/game_engine_python/scripts/example_movement.py"
+            ]
+          }
+        }
+      },
+      {
+        "id": "tri",
+        "name": "Triangle",
+        "components": {
+          "transform": {
+            "x": -0.8700000047683716,
+            "y": 0.9800000190734863,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "triangle",
+              "size": 0.6
+            },
+            "color": [
+              0.2,
+              0.8,
+              0.2,
+              1.0
+            ]
+          },
+          "collider": {
+            "width": 0.6,
+            "height": 0.6,
+            "is_solid": false,
+            "mass": 5000000.0
+          },
+          "script": {
+            "scripts": []
+          }
+        }
+      },
+      {
+        "id": "cir",
+        "name": "Circle",
+        "components": {
+          "transform": {
+            "x": 0.5099999904632568,
+            "y": 0.2800000011920929,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "circle",
+              "radius": 1.0099999904632568,
+              "segments": 32
+            },
+            "color": [
+              0.9999899864196777,
+              0.9999932646751404,
+              1.0,
+              1.0
+            ]
+          },
+          "collider": {
+            "width": 0.4,
+            "height": 0.4,
+            "is_solid": true,
+            "mass": 98.69999694824219
+          },
+          "script": {
+            "scripts": []
+          }
+        }
+      }
+    ]
+  }
+}
