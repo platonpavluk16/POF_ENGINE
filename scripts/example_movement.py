@@ -3,7 +3,7 @@ import Engine.input as input
 
 class ExampleMovement:
     def __init__(self):
-        self.speed = 0.002
+        self.speed = 0.2
         self.render = None
 
     def on_update(self):
