@@ -21,9 +21,11 @@ The engine focuses on simplicity, readability, and flexibility while keeping the
 
 ## 🖼 Preview
 
+![Engine Preview](logo.png)
+
 > Rendering, UI, and scene management are handled directly by the engine.
 
-*(add screenshots or gifs here later)*
+
 
 ---
 
