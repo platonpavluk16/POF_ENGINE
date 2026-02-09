@@ -1,0 +1,19 @@
+{
+  "name": "ege",
+  "description": "",
+  "created": "2026-02-08T21:44:48.440203",
+  "modified": "2026-02-08T21:44:48.440203",
+  "version": "0.1.0",
+  "engine_version": "0.1.0",
+  "settings": {
+    "width": 123,
+    "height": 123,
+    "target_fps": 60,
+    "clear_color": [
+      0.1,
+      0.1,
+      0.1,
+      1.0
+    ]
+  }
+}

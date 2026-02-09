@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from Engine.engine import Engine
 from ECS.scene import Scene
 from Engine.editor import Editor
-import Engine.input as input
+import Engine.input as input_engine
 from Engine.project_manager import ProjectManager
 from Engine.project_ui import ProjectCreator
 
@@ -109,7 +109,7 @@ def main():
         frame_count = 0
         while not engine.should_close():
             engine.begin()
-            input.in_update()
+            input_engine.update()
             
             if editor:
                 editor.begin_frame()

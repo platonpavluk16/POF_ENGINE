@@ -1,0 +1,32 @@
+{
+  "scene": {
+    "name": "Main",
+    "objects": [
+      {
+        "id": "circle",
+        "name": "Circle",
+        "components": {
+          "transform": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "circle",
+              "radius": 0.5,
+              "segments": 32
+            },
+            "color": [
+              0.7,
+              0.7,
+              0.7,
+              1.0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
