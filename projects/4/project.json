@@ -1,0 +1,19 @@
+{
+  "name": "4",
+  "description": "",
+  "created": "2026-02-09T10:10:06.956196",
+  "modified": "2026-02-09T10:10:06.956196",
+  "version": "0.1.0",
+  "engine_version": "0.1.0",
+  "settings": {
+    "width": 1024,
+    "height": 768,
+    "target_fps": 60,
+    "clear_color": [
+      0.1,
+      0.1,
+      0.1,
+      1.0
+    ]
+  }
+}

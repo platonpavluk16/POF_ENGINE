@@ -1,0 +1,74 @@
+{
+  "scene": {
+    "name": "Main",
+    "objects": [
+      {
+        "id": "rectangle",
+        "name": "Rectangle",
+        "components": {
+          "transform": {
+            "x": 0.3700000047683716,
+            "y": 0.0,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "rectangle",
+              "width": 2.2100000381469727,
+              "height": 0.9100000262260437
+            },
+            "color": [
+              0.6372548937797546,
+              0.39359861612319946,
+              0.39359861612319946,
+              1.0
+            ]
+          },
+          "script": {
+            "scripts": [
+              "D:/project/game_engine_python/scripts/example_movement.py"
+            ]
+          },
+          "collider": {
+            "width": 2.2100000381469727,
+            "height": 0.9100000262260437,
+            "is_solid": true,
+            "mass": 1.0
+          }
+        }
+      },
+      {
+        "id": "circle",
+        "name": "Circle",
+        "components": {
+          "transform": {
+            "x": 0.0,
+            "y": 1.9500000476837158,
+            "z": 0.0,
+            "scale": 1.0
+          },
+          "render": {
+            "shape": {
+              "type": "circle",
+              "radius": 0.5,
+              "segments": 32
+            },
+            "color": [
+              0.8774510025978088,
+              0.06881967931985855,
+              0.06881967931985855,
+              1.0
+            ]
+          },
+          "collider": {
+            "width": 1.100000023841858,
+            "height": 1.5499999523162842,
+            "is_solid": false,
+            "mass": 172.60000610351562
+          }
+        }
+      }
+    ]
+  }
+}

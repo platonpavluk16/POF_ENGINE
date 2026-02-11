@@ -1,3 +1,5 @@
+import math
+
 class Camera:
     def __init__(self, width=1024, height=768, position=(0, 0), zoom=1.0):
         self.width = width
@@ -8,6 +10,10 @@ class Camera:
         self.target_object = None
         self.follow_speed = 5.0
         self.target_zoom = zoom
+        self.pos = [0.0, 0.0, 3.0]
+        self.fov = 125.0
+        self.near = 0.1
+        self.far = 100.0
 
     def set_position(self, x, y):
         self.x = x
@@ -27,36 +33,29 @@ class Camera:
         if self.target_object:
             target_x = self.target_object.x if hasattr(self.target_object, 'x') else 0
             target_y = self.target_object.y if hasattr(self.target_object, 'y') else 0
-            
+
             self.x += (target_x - self.x) * self.follow_speed * dt
             self.y += (target_y - self.y) * self.follow_speed * dt
 
         self.zoom += (self.target_zoom - self.zoom) * 5.0 * dt
 
     def get_view_matrix(self):
-        translate_matrix = [
+        # Матриця вигляду (View Matrix)
+        # Вона переміщує весь світ у протилежному напрямку від камери
+        x, y, z = self.pos
+        return [
             1.0, 0.0, 0.0, 0.0,
             0.0, 1.0, 0.0, 0.0,
             0.0, 0.0, 1.0, 0.0,
-            -self.x, -self.y, 0.0, 1.0,
+            -x, -y, -z, 1.0
         ]
-        return translate_matrix
-
     def get_projection_matrix(self):
-        left = -self.width / (2.0 * self.zoom)
-        right = self.width / (2.0 * self.zoom)
-        bottom = -self.height / (2.0 * self.zoom)
-        top = self.height / (2.0 * self.zoom)
-        near = -1.0
-        far = 1.0
+        aspect = self.width / self.height if self.height != 0 else 1.0
+        f = 1.0 / math.tan(math.radians(self.fov) / 2.0)
 
-        proj = [
-            2.0 / (right - left), 0.0, 0.0, 0.0,
-            0.0, 2.0 / (top - bottom), 0.0, 0.0,
-            0.0, 0.0, -2.0 / (far - near), 0.0,
-            -(right + left) / (right - left),
-            -(top + bottom) / (top - bottom),
-            -(far + near) / (far - near),
-            1.0,
+        return [
+            f / aspect, 0.0, 0.0, 0.0,
+            0.0, f, 0.0, 0.0,
+            0.0, 0.0, (self.far + self.near) / (self.near - self.far), -1.0,
+            0.0, 0.0, (2.0 * self.far * self.near) / (self.near - self.far), 0.0
         ]
-        return proj

@@ -1,0 +1,19 @@
+{
+  "name": "Good",
+  "description": "",
+  "created": "2026-02-11T15:02:26.181197",
+  "modified": "2026-02-11T15:02:26.181197",
+  "version": "0.1.0",
+  "engine_version": "0.1.0",
+  "settings": {
+    "width": 1920,
+    "height": 1080,
+    "target_fps": 60,
+    "clear_color": [
+      0.1,
+      0.1,
+      0.1,
+      1.0
+    ]
+  }
+}

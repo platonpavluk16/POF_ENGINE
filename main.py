@@ -109,7 +109,7 @@ def main():
         frame_count = 0
         while not engine.should_close():
             engine.begin()
-            input_engine.update()
+            input_engine.in_update()
             
             if editor:
                 editor.begin_frame()
